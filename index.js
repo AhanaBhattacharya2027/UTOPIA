@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express=require("express");
 const app=express();
 const port=8080;
@@ -6,6 +7,13 @@ const mongoose = require("mongoose");
 const session = require('express-session');
 const User=require("./models/user.js");
 const Post=require("./models/post.js");
+
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log('MongoDB connected'))
+.catch(err => console.error('MongoDB connection error:', err));
 main().then(()=> {
     console.log("Connection successful!");
 })

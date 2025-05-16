@@ -1,0 +1,27 @@
+*{
+    color:pink    
+}
+body{
+    background:linear-gradient(to right, #000000,#780000)
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outerContainer{
+    width:100%;display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.add-post{
+    height: 50px;
+    width: 150px;
+    border-radius: 15%;
+    background-color: pink;
+    font-size: 20px;
+    color: #780000;
+    font-weight: bold;
+    box-shadow: 10px 10px 10px black;
+}

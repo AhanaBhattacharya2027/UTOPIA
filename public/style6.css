@@ -1,0 +1,9 @@
+body{
+    background: linear-gradient(to right, #000000,#780000);
+}
+.post-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: pink;
+}

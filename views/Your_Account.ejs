@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <%for(let post of allYourPosts){%>
+        <div class="outerContainer ">
+            <div class="innerContainer">
+                <h1><%=post.title%></h1>
+                <h3><%=post.content%></h3>
+                <h4><%=post.created_at%></h4>
+            </div>
+            <form action="/delete-post/<%= post._id %>" method="post"><button class="add-post" >Delete post</button></form>
+            
+        </div>
+    <%}%>
+    <br><br>
+    <div class="container">
+        <a href="/write-your-blog" ><button class="add-post">Add a Post</button></a>
+    </div> 
+</body>
+</html>

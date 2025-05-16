@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-Posts</title>
+    <link rel="stylesheet" href="style6.css">
+    
+</head>
+<body>
+    <%for(post of allPosts){%>
+        <div class="post-card">
+            <div class="inner-card">
+                <h1><%=post.title%></h1>
+                <h3><%=post.content%></h3>
+                <h3><strong>By : </strong><%= post.user.username%> </h3>
+                <h4><%=post.created_at%></h4>
+                <br>
+            </div>
+        </div>
+    <%}%>       
+</body>
+</html>
